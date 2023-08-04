@@ -33,7 +33,14 @@
 </template>
 
 <script setup>
-// shallofRef ve nextTick araştır
+
+// shallowRef => Bir değeri referans olarak saklar. Ancak bu değer bir nesne veya dizi gibi karmaşık veri türü ise, içeriğinin tamamen izlenmesine gerek kalmadan değişiklikler tespit edilir. Bu perfomansı arttırır.
+
+
+// nextTick => Vue'un işlem döngüsünün sonraki adımında bir işlevi çalıştırmanızı sağlar. Bu genellikle DOM güncellemelerinden sonra belirli bir işlem yapmak istediğinizde kullanılır. Örneğin bir DOM elemanını güncellediyseniz ve bu güncelleme tamamlandığında bir şey yapmak istiyorsanız nexTick işlevini kullanabilirsiniz.
+
+
+
 import { ref, shallowRef, computed, watch, nextTick } from "vue";
 import Chart from "chart.js/auto";
 
